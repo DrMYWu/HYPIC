@@ -1,6 +1,3 @@
-# HYPIC
-HYPIC: A fast hybrid EM PIC-MCC code for ion cyclotron resonance energization in cylindrical coordinate system
-
 # HYPIC v1.1
 Here is the revision log.
 Compared to HYPIC v1.0, this release (v1.1) has the following upgrades:
@@ -17,8 +14,7 @@ absorbed by the plasma (measured as the power lost by the particles from the bou
 (8)Optimized the plotting code (in matlab language).
 These improvements increase the computational effort, which can be balanced by appropriately reducing the frequency and particle count.
 
-Added by Mingyang Wu, ymwu@pku.edu.cn or 5927754972@qq.com, 
-Peking University
+Added by Mingyang Wu, ymwu@pku.edu.cn or 5927754972@qq.com, Peking University
 2024-09-05 20:15
 
 
