@@ -61,6 +61,7 @@
 
     call fdfd_ini
     call grid
+    call antenna
     
     r_inject_cener=0.0;    !m, rc, central axial position of inject particle    
     z_inject_cener=0.0;    !m, zc, central axial position of inject particle   
@@ -71,7 +72,6 @@
     r_resonance=r_inject_cener !m, radial resonant position,usually set r_resonance=r_inject_cener
     z_resonance=za            !m,  axial resonant position,usually set z_resonance=za
     
-    call antenna
     call set_ne_Te_ini
     call mcc_constant
     
