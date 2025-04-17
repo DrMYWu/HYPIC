@@ -91,7 +91,7 @@
             ur_tp=u_mhd(ir,iz,1)                   !--u by MHD----------!
             !ur_tp=0.5*(u_pic(ir,iz,1)+u_pic(ir+1,iz,1)) !--u by PIC----------!
 
-            term1=-2.5*de*coeff_1_mue2_br2/coeff_1_mue2_b2*tp1*dter
+            term1=-1.5*de*coeff_1_mue2_br2/coeff_1_mue2_b2*tp1*dter
             term2=2.5*ur_tp*tp1*(.5*(te_k(ir+1, iz)+te_k( ir,iz)))
             flux_qe(ir,iz,1)= term1+term2
         end do
@@ -120,7 +120,7 @@
             uz_tp=u_mhd(ir,iz,2)                 !--u by MHD----------!
             !uz_tp=0.5*(u_pic(ir,iz,2)+u_pic(ir,iz+1,2)) !--u by PIC----------!
 
-            term1=-2.5*de*coeff_1_mue2_bz2/coeff_1_mue2_b2*tp1*dtez
+            term1=-1.5*de*coeff_1_mue2_bz2/coeff_1_mue2_b2*tp1*dtez
             term2=2.5*uz_tp*tp1*(.5*(te_k(ir,iz+1)+te_k(ir,iz)))
             flux_qe(ir,iz,3)= term1+term2
         end do
@@ -151,7 +151,7 @@
     nu_0(1:nrp,1:nz)=ni(1:nrp,1:nz)*coeff_Te_1/(qe_abs*te_k(1:nrp,1:nz))**1.5;
     Q_ie(1:nrp,1:nz)=(nu_0(1:nrp,1:nz)*coeff_Te_3*(1+coeff_Te_2*Ek_ion_2D(1:nrp,1:nz)/te_k(1:nrp,1:nz))**(-1.5))* &
         & (Ek_ion_2D(1:nrp,1:nz)/1.5-te_k(1:nrp,1:nz))
-    x_k_out(1:nrp,1:nz)=2/3.*(-divqe(1:nrp,1:nz)+ni(1:nrp,1:nz)*Q_ie(1:nrp,1:nz)+power_depo_2D(1:nrp,1:nz));
+    x_k_out(1:nrp,1:nz)=2/3.*(-divqe(1:nrp,1:nz)+ni(1:nrp,1:nz)*Q_ie(1:nrp,1:nz)+real(power_depo_2D(1:nrp,1:nz))/qe_abs);
     endsubroutine te_RK4
 
 
