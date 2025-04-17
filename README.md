@@ -68,7 +68,7 @@ How to run the code:
      (3) run 'start'
    ifort compiler in linux
      (1) compile with order: 
-	     ifort hypic.f90 fun_b0.f90 fun_record_display.f90 fun_grid.f90 fun_ini.f90 fun_irf_antenna.f90 fun_particles.f90 fun_mcc.f90 fun_fdfd.f90 -mkl -o 3-1.x
+	     ifort hypic.f90 fun_b0.f90 fun_record_display.f90 fun_grid.f90 fun_ini.f90 fun_irf_antenna.f90 fun_particles.f90 fun_mcc.f90 fun_fdfd.f90 fun_te.f90 -mkl -o 3-1.x
      (2) run order
 	     #insure iswitch_display=  1, display the running state on screen.
 	     ./3-1.x
